@@ -304,6 +304,9 @@ col_hr.subheader("PandaSolutions")
 
 col_hr.markdown("Panda Solutions is a consultancy company that provides predictive employee attiriton services on HR analytics. Company x has developed an attrition forecasting model for its employees. The attrition prediction model makes strong predictions about attrition and turnover when the employee's salary, job satisfaction, age, over time etc. are known.")
 
+col_hr.subheader("Main Goal")
+
+col_hr.markdown("Employee retention strategies are integral to a company’s success and prosperity. When the rate of employee churn is higher than expected, the cost of these losses to the campony also increases. There are many factors that cause employee churn.The main ones are; 'Job change as a result of career progression', 'Work enviroment that is not suitable for career development or does not meet expectations', 'Promotion or transfer to another position within the organization','Employee feeling worthless Excessive workload or feeling of burnout', 'Negative feelings and loss of trust towards upper management or direct managers', 'Organizational commitment is not sufficient','Insufficient wages', 'Working in an extremely conpetitive organizational culture', 'Abnormal imbalances in eorking and rest hours', 'Skills not determined correctly, Employees’s age and personality traits are not suitable for the job', 'Employee sees himself/herself as worthless in the work environment'. In this project, a model of the attrition rate will be developed by addressing these issues in depth.")
 # markdown da aralara resimle vs atılabiliyor
 
 #col_hr.image("Logo-Transparent.png")
