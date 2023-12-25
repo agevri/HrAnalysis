@@ -342,7 +342,7 @@ col_graph1.plotly_chart(fig)
 # graph3
 
 
-col_graph2.subheader("Attrition vs Montyly Income")
+col_graph2.subheader("Attrition vs Monthly Income")
 fig4 = px.violin(dff, x="Attrition", y="MonthlyIncome", color="Attrition")
 col_graph2.plotly_chart(fig4)
 
