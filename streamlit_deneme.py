@@ -371,7 +371,7 @@ jobrole = col_select.selectbox("Select the employee's job role",("Healthcare Rep
                                                                 "Manager", "Manufacturing Director", "Research Director",
                                                                 "Research Scientist", "Sales Executive", "Sales Representative"))
 marital_status=col_select2.selectbox("Select the employee's maritial status", ("Single", "Married", "Divorced"))
-monthly_income=col_select2.number_input("Enter the employee's monthly income",step=1,min_value=500)
+monthly_income=col_select2.number_input("Enter the employee's monthly income",step=1,min_value=500, max_value=None)
 num_of_comp_worked=col_select2.number_input("Enter the total number of companies the employee has previously worked for", step=1,min_value=0)
 over_time=col_select2.selectbox("Select whether the employee works overtime", ("Yes", "No"))
 stockoption= col_select2.number_input("Enter the employee's stock option level", step=1,min_value=0)
