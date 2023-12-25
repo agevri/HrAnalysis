@@ -358,7 +358,7 @@ col_graph2.plotly_chart(fig6)
 model=get_model()
 
 col_select, col_select2=tab_model.columns(2)
-age= pd.to_numeric(col_select.number_input("Enter age of employee", step=1,min_value=1))
+age= pd.to_numeric(col_select.number_input("Enter age of employee", step=1,min_value=1, max_value=100))
 business_travel = col_select.selectbox("Select the employee's travel frequency", ("Travel_Rarely", "Travel_Frequently", "Non-Travel"))
 department = col_select.selectbox("Select the department of employee", ("Human Resources","Sales","Research & Development"))
 distancefromhome = col_select.number_input("Enter the employee's commuting distance", step=1,min_value=0)
@@ -371,7 +371,7 @@ jobrole = col_select.selectbox("Select the employee's job role",("Healthcare Rep
                                                                 "Manager", "Manufacturing Director", "Research Director",
                                                                 "Research Scientist", "Sales Executive", "Sales Representative"))
 marital_status=col_select2.selectbox("Select the employee's maritial status", ("Single", "Married", "Divorced"))
-monthly_income=col_select2.number_input("Enter the employee's monthly income",step=1,min_value=500, max_value=None)
+monthly_income=col_select2.number_input("Enter the employee's monthly income",step=1,min_value=500, max_value=200000)
 num_of_comp_worked=col_select2.number_input("Enter the total number of companies the employee has previously worked for", step=1,min_value=0)
 over_time=col_select2.selectbox("Select whether the employee works overtime", ("Yes", "No"))
 stockoption= col_select2.number_input("Enter the employee's stock option level", step=1,min_value=0)
