@@ -12,11 +12,11 @@ st.set_page_config(layout="wide")
 # bi kere çalıştır ön belleğe al tekrar tekrar çalıştırma
 @st.cache_data
 def get_data():
-    df= pd.read_csv("denemeler/HR_data.csv")
+    df= pd.read_csv("HR_data.csv")
     return df
 
 def get_model():
-    model=joblib.load("denemeler/HR_Attrition_voting_clf2.pkl")
+    model=joblib.load("HR_Attrition_voting_clf2.pkl")
     return model
 
 def grab_col_names(dataframe, cat_th=10, car_th=20):
@@ -284,7 +284,7 @@ def hr_data_prep(df):
 # her şeyi st üzerinden çağırıyoruz
 # st ile yaptığımız her yerde gözükecek
 # kolonlardaki gözükmesini istediklerimizi colonlara atayacağız
-st.image("denemeler/Logo-Transparent.png", width=150)
+st.image("Logo-Transparent.png", width=150)
 
 st.header("EMPLOYEE :green[ATTRITION ANALYSIS] ")
 # win . ile emoji ekleyebiliyoruz
@@ -306,7 +306,7 @@ col_hr.markdown("Panda Solutions is a consultancy company that provides predicti
 
 # markdown da aralara resimle vs atılabiliyor
 
-#col_hr.image("denemeler/Logo-Transparent.png")
+#col_hr.image("Logo-Transparent.png")
 
 col_dataset.subheader("Sample Dataset")
 col_dataset.markdown("This is a fictional dataset created by IBM data scientists.It includes information such as employees' ages, genders, job roles, salaries, education fields and levels, and performance levels. It also includes information such as job involvement, job satisfaction, environmental satisfaction, relationship satisfaction, work life balance obtained from surveys administered to employees.")
@@ -316,7 +316,7 @@ col_dataset.dataframe(dff)
 
 # TAB vIS
 tab_dash.subheader("HR Attrition Dashboard")
-tab_dash.image("denemeler/Attrition.png")
+tab_dash.image("Attrition.png")
 col_graph1, col_graph2=tab_vis.columns(2, gap="small")
 # graph1
 
@@ -410,11 +410,11 @@ else:
         prediction = model.predict(last_row)
         if prediction[0]==1:
             st.snow()
-            tab_model.image("denemeler/bye.jpg", width=200)
+            tab_model.image("bye.jpg", width=200)
             tab_model.error("Attention!!! The employee seems attrited and can resign. It is recommended that necessary improvements be made to this employee.")
         else:
             st.balloons()
-            tab_model.image("denemeler/retantion.jpg", width=200)
+            tab_model.image("retantion.jpg", width=200)
             tab_model.success("Good news!!! Your employee appears to be retained. Keep supporting")
 
         #tab_model.success(f"Attrition : {prediction[0]} ")
